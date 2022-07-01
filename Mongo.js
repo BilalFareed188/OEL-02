@@ -25,13 +25,13 @@ app.post('/sign_up', function(req,res){
     var name = req.body.name;
     var email =req.body.email;
     var subject = req.body.subject;
-    var Message =req.body.Message;
+    var message =req.body.message;
   
     var data = {
         "name": name,
         "email":email,
         "subject":subject,
-        "Message":Message
+        "message":message
     }
     // MongoDb Collection code here
 db.collection('details').insertOne(data, function(err, collection)
