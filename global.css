@@ -1,0 +1,92 @@
+body {
+    background: #1f1f1f;
+    color: #ffffff;
+    /* padding-top: 70px; */
+}
+.productsHeading{
+    padding: 40px 110px;
+}
+#home{
+    height: 80vh;
+    margin-bottom: 150px;
+}
+.grid{
+    width: 900px;
+    display: flex;
+    justify-content: center;
+}
+.ac{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.position-fixed.w-100 {
+    z-index: 9;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid figure {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    overflow: hidden;
+    height: 550px;
+    background: silver;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grid figure img {
+    position: relative;
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.8;
+    transition: opacity 0.5s;
+}
+
+.grid figure figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: crimson;
+    backface-visibility: hidden;
+    transition: transform 0.35s;
+    color: white;
+}
+
+.grid figure figcaption::before, .grid figure figcaption::after {
+    pointer-events: none;
+}
+
+.grid figure figcaption > span::before {
+    display: inline-block;
+    padding: 8px 10px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.grid figure p {
+    font-size: 16px;
+}
+
+figure.effect-slideleft figcaption {
+    width: 50%;
+    transform: translate3d(-200%,0,0);
+}
+
+figure.effect-slideleft figcaption > span {
+    float: right;
+}
+
+figure.effect-slideleft:hover figcaption, figure.effect-slideleft:hover h2, figure.effect-slideleft:hover figcaption > span {
+    transform: translate3d(0,0,0);
+}
+
+.card {
+    background-color: #767676;
+}
